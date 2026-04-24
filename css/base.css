@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Pokémon TCG Tracker</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #2b2b2b; font-family: 'Courier New', monospace; min-height: 100vh; }
+#home { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 40px 20px; gap: 32px; }
+#home-title { font-size: 11px; letter-spacing: 5px; color: #888; text-transform: uppercase; text-align: center; }
+.tracker-btn { width: 100%; max-width: 360px; background: #1a1a1a; border: 1px solid #3a3a3a; border-radius: 16px; padding: 28px 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 140px; box-shadow: 0 4px 20px #00000066, inset 0 1px 0 #ffffff0a; transition: all 0.2s; }
+.tracker-btn img { width: 240px; height: 90px; object-fit: contain; display: block; transition: transform 0.15s, opacity 0.15s; filter: drop-shadow(0 2px 6px #00000088); }
+.tracker-btn.dr-btn:active { border-color: #cc3333; box-shadow: 0 8px 30px #cc333333; }
+.tracker-btn.mew-btn:active { border-color: #249EA9; box-shadow: 0 8px 30px #249EA933; }
+.tracker-btn:active img { transform: scale(0.95); opacity: 0.85; }
+#dr-screen, #mew-screen { display: none; min-height: 100vh; padding-bottom: 60px; }
+#dr-screen.active, #mew-screen.active { display: block; }
+#dr-screen { background: #0a0a0a; color: #e2e2e2; }
+#mew-screen { background: #f0fafa; color: #000; }
+#back-btn { position: fixed; top: 12px; left: 12px; z-index: 99999; background: #000000cc; border: 1px solid #ffffff22; border-radius: 20px; padding: 7px 16px 7px 10px; color: #fff; font-size: 12px; font-family: 'Courier New', monospace; cursor: pointer; display: none; align-items: center; gap: 6px; backdrop-filter: blur(4px); }
+#back-btn.visible { display: flex; }

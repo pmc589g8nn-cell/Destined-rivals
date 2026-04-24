@@ -1,0 +1,58 @@
+#dr-screen * { box-sizing: border-box; margin: 0; padding: 0; }
+#dr-screen { background: #0a0a0a; color: #e2e2e2; font-family: 'Courier New', monospace; padding-bottom: 60px; }
+#dr-screen #dr-header { background: linear-gradient(135deg,#1a0000,#0a0000,#1a0500); border-bottom: 2px solid #cc333344; padding: 20px 16px 16px; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 30px #cc333322; }
+#dr-screen #dr-header-inner { max-width: 900px; margin: 0 auto; }
+#dr-screen #dr-header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+#dr-screen .set-label { font-size: 10px; letter-spacing: 4px; color: #cc3333; margin-bottom: 4px; text-transform: uppercase; }
+#dr-screen .set-title { font-size: 22px; font-weight: 900; letter-spacing: 1px; }
+#dr-screen .set-sub { font-size: 11px; color: #888; margin-top: 4px; }
+#dr-screen .pct { font-size: 32px; font-weight: 900; color: #cc3333; line-height: 1; text-align: right; }
+#dr-screen .pct-sub { font-size: 12px; color: #888; text-align: right; }
+#dr-screen #dr-progress-bar { margin-top: 14px; background: #ffffff11; border-radius: 4px; height: 6px; overflow: hidden; }
+#dr-screen #dr-progress-fill { height: 100%; background: linear-gradient(90deg,#cc3333,#ff6644); border-radius: 4px; transition: width 0.3s; }
+#dr-screen #dr-controls { max-width: 900px; margin: 0 auto; padding: 14px 12px 0; }
+#dr-screen #dr-search-row { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+#dr-screen #dr-search { flex: 1; min-width: 140px; background: #ffffff0d; border: 1px solid #ffffff22; border-radius: 6px; padding: 8px 12px; color: #fff; font-size: 13px; font-family: inherit; outline: none; }
+#dr-screen .filter-btn { background: transparent; border: 1px solid #ffffff22; border-radius: 6px; padding: 8px 14px; color: #888; font-size: 12px; cursor: pointer; font-family: inherit; text-transform: capitalize; }
+#dr-screen .filter-btn.active { background: #cc333322; border-color: #cc3333; color: #cc3333; }
+#dr-screen #dr-rarity-row { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
+#dr-screen .rarity-btn { background: transparent; border: 1px solid #ffffff22; border-radius: 6px; padding: 5px 12px; color: #666; font-size: 11px; cursor: pointer; font-family: inherit; }
+#dr-screen .rarity-btn.active { color: var(--rc); border-color: var(--rc); background: var(--rb); }
+#dr-screen #dr-card-count { font-size: 11px; color: #555; margin-bottom: 10px; }
+#dr-screen #dr-card-list { max-width: 900px; margin: 0 auto; padding: 0 12px; display: flex; flex-direction: column; gap: 2px; }
+#dr-screen .card-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 6px; border-left: 3px solid #333; background: #ffffff04; border-top: 1px solid #ffffff0a; border-right: 1px solid #ffffff0a; border-bottom: 1px solid #ffffff0a; transition: all 0.15s; }
+#dr-screen .card-row.complete { background: #ffffff08; border-top-color: #ffffff18; border-right-color: #ffffff18; border-bottom-color: #ffffff18; }
+#dr-screen .card-num { width: 34px; color: #555; font-size: 11px; flex-shrink: 0; text-align: right; }
+#dr-screen .card-name { flex: 1; font-size: 13px; color: #888; cursor: pointer; text-decoration: underline; text-decoration-color: #55555588; text-underline-offset: 3px; }
+#dr-screen .card-row.complete .card-name { color: #e2e2e2; }
+#dr-screen .rarity-badge { border-radius: 4px; padding: 2px 7px; font-size: 10px; flex-shrink: 0; letter-spacing: 0.5px; }
+#dr-screen .card-btns { display: flex; gap: 6px; flex-shrink: 0; }
+#dr-screen .chk-btn { width: 28px; height: 28px; border-radius: 4px; border: 2px solid #444; background: transparent; cursor: pointer; font-size: 14px; color: #444; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.15s; font-family: inherit; }
+#dr-screen .chk-btn.checked { color: #000; }
+#dr-screen .rh-btn { width: 28px; height: 28px; border-radius: 4px; border: 2px solid #333; background: transparent; cursor: pointer; font-size: 10px; color: #333; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.15s; font-family: inherit; }
+#dr-screen .rh-btn.checked { background: #ff4444; border-color: #ff4444; color: #000; }
+#dr-screen .recent-time { font-size: 10px; color: #555; flex-shrink: 0; }
+#dr-screen #dr-legend { max-width: 900px; margin: 20px auto 0; padding: 0 12px; }
+#dr-screen #dr-legend-inner { background: #ffffff06; border: 1px solid #ffffff0f; border-radius: 8px; padding: 12px; }
+#dr-screen .legend-label { font-size: 10px; color: #555; margin-bottom: 8px; letter-spacing: 2px; text-transform: uppercase; }
+#dr-screen .legend-items { display: flex; flex-wrap: wrap; gap: 8px; }
+#dr-screen .legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #666; }
+#dr-screen .legend-dot { width: 8px; height: 8px; border-radius: 2px; }
+#dr-screen #dr-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+#dr-screen #dr-modal-overlay.open { display: flex; }
+#dr-screen #dr-modal { background: #141414; border: 1px solid #cc333366; border-radius: 12px; padding: 20px; max-width: 380px; width: 100%; text-align: center; font-family: 'Courier New', monospace; }
+#dr-screen #dr-modal-num { font-size: 10px; color: #cc3333; letter-spacing: 3px; margin-bottom: 4px; text-transform: uppercase; }
+#dr-screen #dr-modal-name { font-size: 15px; font-weight: 700; color: #e2e2e2; margin-bottom: 16px; }
+#dr-screen #dr-modal-img { width: 100%; border-radius: 8px; box-shadow: 0 8px 40px #cc333344; display: none; }
+#dr-screen #dr-modal-loading { color: #555; font-size: 13px; padding: 40px 0; }
+#dr-screen #dr-modal-error { color: #555; font-size: 13px; padding: 40px 0; display: none; }
+#dr-screen #dr-modal-close { margin-top: 16px; background: transparent; border: 1px solid #cc333366; border-radius: 6px; color: #cc3333; padding: 8px 24px; cursor: pointer; font-size: 12px; font-family: inherit; letter-spacing: 1px; }
+#dr-screen #dr-modal { position: relative; }
+#dr-screen #dr-modal-checks { position: absolute; top: 14px; right: 14px; display: flex; gap: 6px; }
+#dr-screen .modal-chk-wrap { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+#dr-screen .modal-chk { width: 30px; height: 30px; border-radius: 5px; border: 2px solid #555; background: transparent; cursor: pointer; font-size: 13px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; font-family: inherit; color: #555; }
+#dr-screen .modal-chk-label { font-size: 9px; color: #555; }
+#dr-screen #dr-modal-prev, #dr-screen #dr-modal-next { position: fixed; top: 50%; transform: translateY(-50%); background: #1a1a1a; border: 1px solid #cc333366; border-radius: 50%; width: 44px; height: 44px; font-size: 22px; cursor: pointer; color: #cc3333; display: none; align-items: center; justify-content: center; z-index: 1001; }
+#dr-screen #dr-modal-prev { left: 12px; }
+#dr-screen #dr-modal-next { right: 12px; }
+#dr-screen #dr-modal-overlay.open ~ #dr-modal-prev, #dr-screen #dr-modal-overlay.open ~ #dr-modal-next { display: flex; }
